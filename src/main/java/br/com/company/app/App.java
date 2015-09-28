@@ -12,9 +12,13 @@ import br.com.company.modelo.Person;
  * @author juliano
  */
 public class App {
+
     public static void main(String[] args) {
         Person p = new Person("Juliano Rodrigo", "Lamb", 'm', 1.90, 80.0);
-        System.out.println("Main method");
+        System.out.println("O resultado do IMC: " + calculateIMC(p));
     }
-    
+
+    public static double calculateIMC(Person p) {
+        return p.calculateIMC();
+    }
 }

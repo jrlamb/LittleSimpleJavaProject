@@ -10,6 +10,7 @@ package br.com.company.modelo;
  * @author juliano
  */
 public class Person {
+
     private String firstName;
     private String lastName;
     private char gender;
@@ -23,11 +24,34 @@ public class Person {
         this.height = height;
         this.weight = weight;
     }
-    
-    
-    
-    public double calculteIMC(){
-        return weight/(height*height);
+
+    public Person() {
     }
+
+    public double calculateIMC() {
+        return weight / (height * height);
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    
     
 }
