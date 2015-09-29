@@ -65,9 +65,8 @@ public class AppTest {
     public void testCalculteIMCError() {
         System.out.println("calculteIMCError");
         double expResult = 0.0;
-        double result = App.calculateIMC(person);
-        assertEquals(expResult, result, 0.0);
-        fail("The test failed");
+        double result = App.calculateIMC(person);    
+        assertNotSame(expResult, result);
     }
 
     @Test
@@ -75,8 +74,9 @@ public class AppTest {
         System.out.println("calculteIMCSucess");
         double expResult = 22.1606648199446;
         double result = App.calculateIMC(person);
-        assertEquals(expResult, result, 0.0);
         assertNotNull(result);
+        assertEquals(expResult, result, 0.0);
+        
     }
 
 }
